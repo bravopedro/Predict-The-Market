@@ -25,8 +25,9 @@ public class Logic {
 
     public static double top10List(double[] value , String[] names) {
 
-        int[] top10List = new int[10];
-        int j = 0;
+        int[] top10List = new int[10];          // my logic to create the top 10 list of stocks
+        int j = 0;                              // I know that this could have been done a lot simpler
+                                                // using a sorting algorithm, but I'm not too great with that stuff yet
         double one = 1;
         double two = 2;
         double three = 3;
@@ -97,7 +98,7 @@ public class Logic {
     }
 
     public static double [] BennysNumber(double EPS, double magicNum, double growthRate,  String [] SandPRevised){
-        double [] value = new double [505];
+        double [] value = new double [505];         // plugs in our values for Benjamin Grahams investing Formula
         for(int i = 0; SandPRevised.length > i; i++){
            value[i] =  (EPS * (8.5 + 2 * growthRate) * 4.4) / 2.7;
             SandPRevised[i] = String.valueOf(value[i]);

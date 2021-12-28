@@ -1,7 +1,6 @@
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-
 import java.io.IOException;
 
 
@@ -14,9 +13,10 @@ public class Scraper {
 
         final Document urlofSandPlist = Jsoup.connect("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies").get();
 
-        for(Element row : urlofSandPlist.select("")){
-            final String companyNames = row.select().text();
+        for(Element row : urlofSandPlist.select("wikitable sortable jquery-tablesorter")){
+            final String companyNames = row.select("noFollow").text();
             SandPCos[i] = companyNames;
+            System.out.print(companyNames + " ");
             // the goal is to have this website parsed for the companies' ticker so that these Strings can then be thrown
             // into the {} in our FinWiz website to search for data on these companies.
             }

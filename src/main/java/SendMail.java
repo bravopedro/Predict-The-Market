@@ -5,10 +5,10 @@ public class SendMail {
     //Draft An Email
     //Send Email
     public static void main(String[] args) {
-        SendMail mail = new mail();
-        mail.setupServerProperties();
-        mail.draftEmail();
-        mail.sendEmail();
+       // SendMail mail = new mail();
+      //  mail.setupServerProperties();
+      //  mail.draftEmail();
+     //   mail.sendEmail();
 
     }
     private void draftEmail(){
